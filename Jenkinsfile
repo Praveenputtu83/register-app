@@ -5,25 +5,25 @@ pipeline {
       maven 'Maven3'
     }
     
-    stages("cleanup workspace"){
+    stages("cleanup workspace") {
            steps {
            cleanaWs()
            }
     }
     
-    stage("checkout from SCM"){
+    stage("checkout from SCM") {
            steps {
            git branch: 'main', credentialsId: 'git', url: 'https://github.com/praveenputtu83/register-app'
            }
     }
     
-     stage("Build Application"){
+     stage("Build Application") {
              steps {
                sh "mvn clean package"
              }
     }
     
-     stage("Test Application"){
+     stage("Test Application") {
             steps {
               sh "mvn test"
             } 
