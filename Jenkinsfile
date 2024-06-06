@@ -1,4 +1,4 @@
-Pipeline {
+pipeline {
     agent { label 'agent' }
     tools {
       jdk 'java17'
