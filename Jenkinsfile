@@ -1,4 +1,4 @@
-pipeline {
+Pipeline {
     agent { label 'agent' }
     tools {
       jdk 'java17'
@@ -28,4 +28,4 @@ pipeline {
               sh "mvn test"
             } 
      }
-}
+
