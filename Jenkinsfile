@@ -1,7 +1,7 @@
 pipeline {
     agent { label 'agent' }
     tools {
-        jdk 'Java17'
+        jdk 'java17'
       maven 'Maven3'
     }
     stages{
@@ -13,7 +13,7 @@ pipeline {
     
     stage("Checkout from SCM"){
            steps {
-           git branch: 'main', credentialsId: 'git', url: 'https://github.com/Praveenputtu83/register-app'
+           git branch: 'main', credentialsId: 'git', url: 'https://github.com/Praveenputtu83/register-app', branch: 'main'
            }
     }
     
